@@ -63,4 +63,8 @@ http://192.168.1.100:8000
 ```
 ![image](https://user-images.githubusercontent.com/16554389/206169240-913082da-918e-4374-9a8e-080826b7fd42.png)
 
+![image](https://user-images.githubusercontent.com/16554389/206170037-9ffe07f9-7bd1-49f4-839e-7fa648f86936.png)
+
+![image](https://user-images.githubusercontent.com/16554389/206174882-c8431429-8d56-4270-8667-6549943cf732.png)
+
 
