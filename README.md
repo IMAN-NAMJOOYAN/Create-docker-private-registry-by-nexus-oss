@@ -67,4 +67,6 @@ http://192.168.1.100:8000
 
 ![image](https://user-images.githubusercontent.com/16554389/206174882-c8431429-8d56-4270-8667-6549943cf732.png)
 
+**Configuring containerD for docker private registry**
+
 
