@@ -76,6 +76,7 @@ http://192.168.1.100:8000
 
 ![image](https://user-images.githubusercontent.com/16554389/222885976-4be15953-3c11-44f6-b26d-0bf290202d02.png)
 
+```
 3- cat <<EOF>>/etc/containerd/config.toml
 #-----------------Private Registry
     [plugins."io.containerd.grpc.v1.cri".registry.configs."192.168.1.100:8083".tls]
@@ -85,6 +86,6 @@ http://192.168.1.100:8000
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."192.168.1.100:8083"]
       endpoint = ["http://192.168.1.100"]
 EOF
-
+```
 4- systemctl restart containerd
 
