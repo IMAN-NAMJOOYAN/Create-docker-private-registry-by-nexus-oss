@@ -21,7 +21,7 @@ Step1: Install Nexus OSS 3.x
 2- cd /app
 3- curl -O https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.42.0-01-unix.tar.gz
 4- tar xzfv  https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.42.0-01-unix.tar.gz
-5- mv nexus* nexus
+5- mv nexus* nexus; chown -R nexus:nexus /app/nexus
 6- sed -i.bak 's/application-port=8081/application-port=8000/' /app/nexus/etc/nexus-default.properties
 7- Create nexus service:
 
