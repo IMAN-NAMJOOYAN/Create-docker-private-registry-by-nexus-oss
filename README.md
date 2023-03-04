@@ -68,5 +68,20 @@ http://192.168.1.100:8000
 ![image](https://user-images.githubusercontent.com/16554389/206174882-c8431429-8d56-4270-8667-6549943cf732.png)
 
 **Configuring containerD for docker private registry**
+1- nerdctl login 192.168.1.100
 
+![image](https://user-images.githubusercontent.com/16554389/222885813-36f0c5fb-941f-4bd5-834e-7e8e28b987a7.png)
+
+
+cat <<EOF>>/etc/containerd/config.toml
+#-----------------Private Registry
+    [plugins."io.containerd.grpc.v1.cri".registry.configs."192.168.1.100:8083".tls]
+      insecure_skip_verify = true
+    [plugins."io.containerd.grpc.v1.cri".registry.configs."192.168.1.100:8083".auth]
+      auth = "YWRtaW46QGRtaW4kMTIzNA=="
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."192.168.1.100:8083"]
+      endpoint = ["http://192.168.1.100"]
+EOF
+
+systemctl restart containerd
 
