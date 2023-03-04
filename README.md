@@ -16,7 +16,7 @@ HDD: 100 GB for OS and 50GB for Nexus OSS (APP+Data)
 **Install steps**
 ```
 Step1: Install Nexus OSS 3.x
-
+0- useradd -r nexus --shell /usr/sbin/nologin
 1- mkdir /app
 2- cd /app
 3- curl -O https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.42.0-01-unix.tar.gz
