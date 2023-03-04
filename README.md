@@ -72,16 +72,19 @@ http://192.168.1.100:8000
 
 ![image](https://user-images.githubusercontent.com/16554389/222885813-36f0c5fb-941f-4bd5-834e-7e8e28b987a7.png)
 
+2- cat /root/.docker/config.json
 
-cat <<EOF>>/etc/containerd/config.toml
+![image](https://user-images.githubusercontent.com/16554389/222885976-4be15953-3c11-44f6-b26d-0bf290202d02.png)
+
+3- cat <<EOF>>/etc/containerd/config.toml
 #-----------------Private Registry
     [plugins."io.containerd.grpc.v1.cri".registry.configs."192.168.1.100:8083".tls]
       insecure_skip_verify = true
     [plugins."io.containerd.grpc.v1.cri".registry.configs."192.168.1.100:8083".auth]
-      auth = "YWRtaW46QGRtaW4kMTIzNA=="
+      auth = "Your Base64 Password"
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."192.168.1.100:8083"]
       endpoint = ["http://192.168.1.100"]
 EOF
 
-systemctl restart containerd
+4- systemctl restart containerd
 
