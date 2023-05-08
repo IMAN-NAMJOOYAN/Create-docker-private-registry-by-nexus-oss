@@ -10,6 +10,7 @@ Memory: 4GB
 CPU: 2*2 (4 Cores)
 Nexus OSS 3.x
 HDD: 100 GB for OS and 50GB for Nexus OSS (APP+Data)
+OpenJDK 1.8.0
 ```
 ![image](https://user-images.githubusercontent.com/16554389/206153734-43f3838b-d5cd-4566-a661-0f6820cb4ecb.png)
 
