@@ -1,4 +1,4 @@
-# Private-Registry-by-NexusOSS
+# Private Registry by NexusOSS
 **This document describe how to create docker private registry and use it in containerd**
 
 The environment in which the program is installed has the following specifications:
